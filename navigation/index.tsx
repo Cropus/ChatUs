@@ -4,6 +4,7 @@ import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
 import Colors from '../constants/Colors'
 
+import ChatRoomScreen from '../screens/ChatRoomScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
 import MainTabNavigator from './MainTabNavigator';
@@ -53,7 +54,15 @@ function RootNavigator() {
           // }
         }}
       />
-      <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
+        <Stack.Screen
+            name="ChatRoom"
+            component={ChatRoomScreen}
+            options={({route}) => ({
+                title: route.params.name,
+
+            })}
+        />
+        <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>
   );
 }
