@@ -59,7 +59,6 @@ function RootNavigator() {
             component={ChatRoomScreen}
             options={({route}) => ({
                 title: route.params.name,
-
             })}
         />
         <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
