@@ -58,7 +58,7 @@ const ChatListItem = (props: ChatListItemProps) => {
                             numberOfLines={2}
                             style={styles.lastMessage}>
                             {chatRoom.lastMessage
-                                ? `${chatRoom.lastMessage.user.name}: ${chatRoom.lastMessage.content}`
+                                ? chatRoom.lastMessage.content
                                 : ""}
                         </Text>
                     </View>

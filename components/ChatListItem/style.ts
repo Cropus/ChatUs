@@ -29,6 +29,7 @@ const styles = StyleSheet.create( {
       color: 'grey',
     },
     time: {
+        paddingRight: 10,
         fontSize: 12,
         color: 'grey',
     },
